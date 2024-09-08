@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-full md:hidden">
         <Link href="/">
             <div className="text-2xl tracking-wide">
-            <Image src="/maLogo.png" alt="" width={48} height={48}/>
+            <Image src="/logo_yan.png" alt="" width={128} height={128}/>
             </div>
         </Link>
         <Menu/>
@@ -21,8 +21,8 @@ const Navbar = () => {
             {/* LEFT */}
             <div className="w-1/3 xl:w-1/2 flex items-center gap-12">
                 <Link href="/" className="flex items-center gap-3">
-                    <Image src="/maLogo.png" alt="" width={48} height={48}/>
-                    <div className="text-2xl tracking-wide mx-4">M A Butik</div>
+                    <Image src="/logo_yan.png" alt="" width={128} height={128}/>
+                    {/* <div className="text-2xl tracking-wide mx-4">M A Butik</div> */}
                 </Link> 
                 <div className="hidden xl:flex gap-4">
                 <Link href="/">HomePage</Link>
