@@ -6,7 +6,15 @@ import DOMPurify from "isomorphic-dompurify";
 
 const PRODUCT_PER_PAGE = 20;
 
-const ProductList = async ({categoryId, limit}:{categoryId:string; limit?:number}) => {
+const ProductList = async ({
+  categoryId, 
+  limit,
+  searchParams
+}:{
+  categoryId:string; 
+  limit?:number;
+  searchParams?:any
+}) => {
 
   const wixClient = await wixClientServer();
   const res = await wixClient.products
@@ -17,8 +25,7 @@ const ProductList = async ({categoryId, limit}:{categoryId:string; limit?:number
 
   return (
     <div className='mt-12 flex gap-x-8 justify-between flex-wrap'>
-      {res.items.map((product: products.Product)=>(
-
+      {res.items.map((product: products.Product)=>(       
         <Link 
           href={"/"+product.slug}
           className="w-full mt-5 flex flex-col gap-4 sm:w-[45%] lg:w-[22%]" 
