@@ -14,7 +14,7 @@ const Add = ({
   const [quantity, setQuantity] = useState(1);
 
   // Temporary
-  const stock = 4;
+  //const stock = 4;
 
   const handleQuantity = (type: "i" | "d") => {
     if (type === "d" && quantity > 1) {
@@ -45,10 +45,10 @@ const Add = ({
               +
             </button>
           </div>
-          <div className="text-xs">
+          {stockNumber < 1 ? (<div className="text-xs text-red-600"> Tükendi </div>) : (<div className="text-xs">
             Sadece <span className="text-orange-500">{stockNumber} adet</span> kaldı!{" "}
             <br /> Tükenmeden alın
-          </div>
+          </div>)}
         </div>
         <button className="w-36 text-sm rounded-3xl ring-1 ring-lama text-lama py-2 px-4 hover:bg-lama hover:text-white disabled:cursor-not-allowed disabled:bg-pink-200 disabled:text-white disabled:ring-none">
           Sepete Ekle

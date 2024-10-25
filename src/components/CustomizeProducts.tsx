@@ -51,7 +51,6 @@ const CustomizeProducts = ({
     });
   };
 
-  console.log(variants);
 
   return (
     <div className="flex flex-col gap-6">
@@ -121,8 +120,5 @@ const CustomizeProducts = ({
     </div>
   );
 };
-  );
-};
 
-export default CustomizeProducts;
 export default CustomizeProducts;

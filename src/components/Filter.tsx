@@ -10,8 +10,10 @@ const Filter = () => {
   const {replace} = useRouter();
   const handleFilterChange = (e:React.ChangeEvent<HTMLSelectElement | HTMLInputElement>)=>{
     const {name,value} = e.target;
-    console.log(name,value);
-  }
+    const params = new URLSearchParams(searchParams);
+    params.set(name,value);
+    replace(`${pathname}?${params.toString()}`);
+  };
 
   return (
     <div className="mt-12 flex justify-between">
@@ -63,10 +65,10 @@ const Filter = () => {
             onChange={handleFilterChange}
           >
             <option>Sırala</option>
-            <option value="">Fiyat(artan)</option>
-            <option value="">Fiyat(azalan)</option>
-            <option value="">En Yeni</option>
-            <option value="">En Eski</option>
+            <option value="asc price">Fiyat(artan)</option>
+            <option value="desc price">Fiyat(azalan)</option>
+            <option value="asc lastUpdated">En Yeni</option>
+            <option value="desc lastUpdated">En Eski</option>
           </select>
         </div>
       </div>
