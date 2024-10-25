@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 /*  const images = [
+/*  const images = [
    {
      id: 1,
      url: "https://images.pexels.com/photos/19036832/pexels-photo-19036832/free-photo-of-mountain-reflection-in-lake.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load",
@@ -21,13 +22,16 @@ import { useState } from "react";
      url: "https://images.pexels.com/photos/20832069/pexels-photo-20832069/free-photo-of-a-narrow-street-with-buildings-and-cars.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load",
    },
  ]; */
+ ]; */
 
+const ProductImages = ({items}:{items:any}) => {
 const ProductImages = ({items}:{items:any}) => {
     const [index, setIndex] = useState(0)
   return (
     <div className="">
       <div className="h-[500px] relative">
         <Image
+          src={items[index].image?.url}
           src={items[index].image?.url}
           alt=""
           fill

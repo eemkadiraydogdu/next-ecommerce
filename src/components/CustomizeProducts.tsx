@@ -121,5 +121,8 @@ const CustomizeProducts = ({
     </div>
   );
 };
+  );
+};
 
+export default CustomizeProducts;
 export default CustomizeProducts;
