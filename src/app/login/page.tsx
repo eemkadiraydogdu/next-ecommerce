@@ -46,8 +46,8 @@ const LoginPage = () => {
   const wixClient = useWixClient();
   const login = async () => {
     const loginRequestData = wixClient.auth.generateOAuthData(
-      "http://localhost:3000/callback",
-      "http://localhost:3000/login",
+      "https://sage-halva-8ec5e1.netlify.app/callback",
+      "https://sage-halva-8ec5e1.netlify.app/login",
     );
     console.log(loginRequestData);
     localStorage.setItem("oAuthRedirectData", JSON.stringify(loginRequestData));
