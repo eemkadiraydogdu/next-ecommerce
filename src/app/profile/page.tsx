@@ -1,4 +1,15 @@
-import UpdateButton from "@/components/UpdateButton";
+
+
+const ProfilePage = () => {
+  return (
+    <div>ProfilePage</div>
+  )
+}
+
+export default ProfilePage
+
+
+/* import UpdateButton from "@/components/UpdateButton";
 import { updateUser } from "@/lib/actions";
 import { wixClientServer } from "@/lib/wixClientServer";
 import { members } from "@wix/members";
@@ -95,4 +106,4 @@ const ProfilePage = async () => {
   );
 };
 
-export default ProfilePage;
+export default ProfilePage; */
